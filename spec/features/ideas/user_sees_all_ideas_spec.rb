@@ -9,5 +9,7 @@ describe 'user sees ideas index page' do
 
     expect(page).to have_link(idea_1.title)
     expect(page).to have_link(idea_2.title)
+    expect(page).to have_link(idea_2.title)
+    expect(page).to have_link("Create a New Idea")
   end
 end
