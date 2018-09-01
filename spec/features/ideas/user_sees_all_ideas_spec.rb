@@ -7,7 +7,7 @@ describe 'user sees ideas index page' do
 
     visit ideas_path
 
-    expect(page).to have_content(idea_1.title)
-    expect(page).to have_content(idea_2.title)
+    expect(page).to have_link(idea_1.title)
+    expect(page).to have_link(idea_2.title)
   end
 end
