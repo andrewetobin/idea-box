@@ -1,0 +1,5 @@
+<h1><%= @idea.title %></h1>
+<p><%= @idea.body %></p>
+
+<%= link_to "Delete", idea_path(@idea), method: :delete, data: {confirm: "Really delete the idea?"} %>
+<%= link_to "<< Back to Ideas List", ideas_path %>
