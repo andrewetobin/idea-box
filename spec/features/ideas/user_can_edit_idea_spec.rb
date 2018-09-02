@@ -19,7 +19,7 @@ describe "user edits an idea" do
       expect(current_path).to eq(idea_path(idea_1))
       expect(page).to have_content(new_title)
       expect(page).to have_content(new_body)
-      # expect(page).to have_content("Idea '#{new_title}' updated!")
+      expect(page).to have_content("Idea '#{new_title}' Updated!")
     end
   end
 end

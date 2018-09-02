@@ -30,6 +30,7 @@ class IdeasController < ApplicationController
   def update
     @idea.update(idea_params)
 
+    flash.notice = "Idea '#{@idea.title}' Updated!"
     redirect_to idea_path(@idea)
   end
 
