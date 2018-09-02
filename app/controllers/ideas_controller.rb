@@ -13,12 +13,17 @@ class IdeasController < ApplicationController
   end
 
   def create
-    @idea = Idea.new
-    @idea.title = params[:idea][:title]
-    @idea.body = params[:idea][:body]
+    @idea = Idea.new(idea_params)
     @idea.save
+
     redirect_to idea_path(@idea)
   end
+
+  private
+
+    def idea_params
+      params.require(:idea).permit(:title, :body)
+    end
 
 
 end
