@@ -5,7 +5,13 @@
     <%= link_to category.name, category_path(category) %>
   <% end %>
 </p>
+
+<% if @idea.image.exists? %>
+  <p><%= image_tag @idea.image.url(:medium) %></p><br/>
+<% end %>
+
 <p><%= @idea.body %></p>
+
 <%= link_to "Edit", edit_idea_path(@idea) %>
 <%= link_to "Delete", idea_path(@idea), method: :delete, data: {confirm: "Really delete the idea?"} %>
 <%= link_to "<< Back to Ideas List", ideas_path %>
