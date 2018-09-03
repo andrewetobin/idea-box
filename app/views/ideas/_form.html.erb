@@ -4,7 +4,8 @@
       <li><%= error %></li>
     <% end %>
   </ul>
-  <p>
+
+ <%= options_from_collection_for_select(Category.all, :id, :name) %>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </p>

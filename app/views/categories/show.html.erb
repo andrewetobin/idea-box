@@ -1,0 +1,8 @@
+<h1>Ideas under <%= @category.name %> category</h1>
+
+<ul>
+  <% @category.ideas.each do |idea| %>
+    <li><%= link_to idea.title, idea_path(idea) %></li>
+  <% end %>
+</ul>
+<%= link_to "Delete", category_path(@category), method: :delete, data: {confirm: "Really delete the category?"} %>
