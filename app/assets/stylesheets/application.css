@@ -10,6 +10,40 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require_reset.css
  *= require_tree .
  *= require_self
  */
+a {
+   color: black;
+ }
+ nav {
+   height: 70px;
+   font-size: 25px;
+   background-color: #AFC97E;
+   margin: 0;
+   padding: 0;
+ }
+ nav a {
+   font-size: 25px;
+   padding: 0px 40px 0px 0px;
+ }
+ p {
+   color: black;
+ }
+ .new-idea {
+   height: 400px;
+   padding: 60px 0px 450px 0px;
+   text-align: center;
+   background-color: #D4E6B5
+ }
+
+ .new-idea h1 {
+   font-size: 40px;
+   padding: 20px 0px 30px;
+ }
+ footer {
+  padding: 20px;
+  background-color: #877B66;
+  color: white;
+ }

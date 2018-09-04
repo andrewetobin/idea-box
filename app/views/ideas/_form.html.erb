@@ -5,7 +5,10 @@
     <% end %>
   </ul>
 
- <%= options_from_collection_for_select(Category.all, :id, :name) %>
+
+  <%= select_tag(:category_id, options_from_collection_for_select(Category.all, :id, :name)) %>
+
+  <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </p>
@@ -16,7 +19,7 @@
   <% if @idea.image.exists? %>
     <%= image_tag @idea.image.url(:thumb) %><br/>
   <% end %>
-    <%= f.label :image, "Attach a New Image" %><br />
+    <%= f.label :image, "Attach a New Image" %>
     <%= f.file_field :image %>
   <p>
     <%= f.submit %>
